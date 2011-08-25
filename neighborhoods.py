@@ -1,8 +1,11 @@
-from Credentials import *
 from sys import argv
 import simplegeo.context as context
 from itertools import ifilter
 import json as simplejson
+
+# Importing my own credentials for the SimpleGeo API. Credentials.py is one line: credentials = {'key':'YOUR-OAUTH-KEY','secret':'YOUR-SECRET'}
+# Comment this out if you want to keep your credentials in this script.
+from Credentials import *
 
 def conv_decimal_to_string(decimal):
     """Converting SimpleGeo's lat/long Decimals to strings
@@ -38,7 +41,7 @@ def create_geojson_for_neighborhoods(city,file_name):
   file_name -- The name you want for your output file e.g., output_boston.json
   """
   print 'Connecting to the SimpleGeo Context API.'
-  #initialize client with: client = context.Client('Your-Key','Your-Secret')
+  #initialize client with: client = context.Client('YOUR-OAUTH-KEY','YOUR-SECRET')
   client = context.Client(credentials['key'],credentials['secret'])
   #city data
   cities = {'boston':{'lat':42.332,'lon':-71.0202},'san francisco':{'lat':37.7599,'lon':-122.437}}
