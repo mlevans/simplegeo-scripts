@@ -5,6 +5,7 @@ Python scripts for interacting with SimpleGeo's Context API
 Python Requirements
 -----------------------
 You can install the SimpleGeo's Python [library](http://pypi.python.org/pypi/simplegeo/3.0.115) with easy_install or pip. The commands are:
+
 * easy_install simplegeo
 * pip install simplegeo
 
