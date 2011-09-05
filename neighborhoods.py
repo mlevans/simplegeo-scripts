@@ -69,7 +69,7 @@ def create_geojson_for_neighborhoods(city,file_name):
   #start building the GeoJSON for the Neighborhoods
   neighborhoods = {"type": "FeatureCollection", "features": []}
   
-  print 'Processing Neighborhoods.'
+  print 'Processing', len(city_neighborhoods['features']), 'Neighborhoods.'
   
   for hood in city_neighborhoods['features']:
     hood_feature = client.get_feature(hood['handle'])
